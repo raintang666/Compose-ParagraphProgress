@@ -206,26 +206,6 @@ fun ParagraphProgress(
                         onValueChange.invoke(progress)
                     }
                 )
-//                detectHorizontalDragGestures(
-//                    onHorizontalDrag = { change, offset ->
-//                        Log.e("", "onCreate: $change")
-//                        dragModel = true
-//                        dotX = (dotX + offset).coerceIn(dotSize, width.toFloat() - dotSize)
-//                        progress = ((dotX - dotSize) / (width - 2 * dotSize))
-//                        progressPoints.clear()
-//                        paragraphPoints?.forEach { point ->
-//                            if (point < progress) progressPoints.add(point)
-//                        }
-//                        progressPoints.add(progress)
-//                        onValueChange.invoke(progress)
-//                    },
-//                    onDragEnd = {
-//                        dragModel = false
-//                    },
-//                    onDragCancel = {
-//                        dragModel = false
-//                    }
-//                )
             }
             .draggable(draggableState, orientation = Orientation.Horizontal, onDragStarted = {
                 dragModel = true
